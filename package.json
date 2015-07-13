@@ -1,0 +1,39 @@
+{
+  "name": "dnvm",
+  "version": "1.0.0",
+  "description": "aspnet5 dnvm/dnu/dnx commands",
+  "author": "Morten Andersen",
+  "license": "ISC",
+  "homepage": "https://github.com/moander/npm-dnvm#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moander/npm-dnvm.git"
+  },
+  "keywords": [
+    "aspnet",
+    "dnvm",
+    "dnx",
+    "kestrel"
+  ],
+  "bugs": {
+    "url": "https://github.com/moander/npm-dnvm/issues"
+  },
+  "bin": {
+    "dnu": "bin/dnu",
+    "dnvm": "bin/dnvm",
+    "dnx": "bin/dnx"
+  },
+  "files": [
+    "bin",
+    "ext"
+  ],
+  "dependencies": {
+  },
+  "devDependencies": {
+    "async": "^1.3.0"
+  },
+  "preferGlobal": true
+}

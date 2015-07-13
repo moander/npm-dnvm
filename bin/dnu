@@ -1,0 +1,14 @@
+#!/bin/bash
+pushd . > /dev/null
+SCRIPT_PATH="${BASH_SOURCE[0]}";
+while([ -h "${SCRIPT_PATH}" ]); do
+    cd "`dirname "${SCRIPT_PATH}"`"
+    SCRIPT_PATH="$(readlink "`basename "${SCRIPT_PATH}"`")";
+done
+mycmd=$(basename "$SCRIPT_PATH")
+mydir=$(cd "$(dirname "$SCRIPT_PATH")" && cd .. && pwd -P)
+popd  > /dev/null
+
+export MONO_MANAGED_WATCHER=disabled
+source "$mydir/ext/dnvm.sh"
+$mycmd "$@"
